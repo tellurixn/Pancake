@@ -13,6 +13,5 @@ public:
 	void ShowPriceList();
 	void ShowPrice(int Id);
 	int Make(int Money, int Id);
-	void Check(int value);
 };
 

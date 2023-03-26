@@ -36,9 +36,6 @@
     <ClCompile Include="Packer.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Payment.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Dropoff.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -46,6 +43,9 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="HelperBot.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Payment.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
