@@ -9,6 +9,8 @@
 #include "Packer.h"
 #include "ProxyBot.h"
 #include "HelperBot.h"
+#include "DespenserWithDough.h"
+#include "DespenserWithSweetStuffing.h"
 
 int main()
 {
@@ -36,9 +38,13 @@ int main()
     Plate * plate = new Plate();
     Fan * fan = new Fan();
     Packer* packer = new Packer();
-    Despenser* despenser = new Despenser();
     Scapula* scapula = new Scapula();
     Scales* scales = new Scales();
+    Despenser despenser;
+    
+    //Добавление декораторов для дозатора
+    DespenserWithDough despWithDough(&despenser);
+    DespenserWithSweetStuffing despWithSweetStuffing(&despenser);
 
     //Установка созданных компонетов в систему
     System PancakeSystem;
@@ -65,7 +71,7 @@ int main()
     }while(PancakeSystem.MakeAPayment(userMoney, userValue - 1) != 0);
     
     cout << "\nНачинаю готовить " +  recipeList->at(userValue - 1) << endl;
-    PancakeSystem.SetActiveDevice(despenser);
+    PancakeSystem.SetActiveDevice(&despWithDough);
     PancakeSystem.Enable();
     PancakeSystem.Disable();
     PancakeSystem.SetActiveDevice(fan);
@@ -77,7 +83,7 @@ int main()
     PancakeSystem.SetActiveDevice(scapula);
     PancakeSystem.Enable();
     PancakeSystem.Disable();
-    PancakeSystem.SetActiveDevice(despenser);
+    PancakeSystem.SetActiveDevice(&despWithSweetStuffing);
     PancakeSystem.Enable();
     PancakeSystem.Disable();
     PancakeSystem.SetActiveDevice(plate);

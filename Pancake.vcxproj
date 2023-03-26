@@ -128,6 +128,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Despenser.cpp" />
+    <ClCompile Include="DespenserContent.cpp" />
+    <ClCompile Include="DespenserWithDough.cpp" />
     <ClCompile Include="Dropoff.cpp" />
     <ClCompile Include="Fan.cpp" />
     <ClCompile Include="HelperBot.cpp" />
@@ -137,11 +139,14 @@
     <ClCompile Include="Plate.cpp" />
     <ClCompile Include="Scales.cpp" />
     <ClCompile Include="Scapula.cpp" />
+    <ClCompile Include="DespenserWithSweetStuffing.cpp" />
     <ClCompile Include="System.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bot.h" />
     <ClInclude Include="Despenser.h" />
+    <ClInclude Include="DespenserContent.h" />
+    <ClInclude Include="DespenserWithDough.h" />
     <ClInclude Include="Dropoff.h" />
     <ClInclude Include="Fan.h" />
     <ClInclude Include="HelperBot.h" />
@@ -152,6 +157,7 @@
     <ClInclude Include="ProxyBot.h" />
     <ClInclude Include="Scales.h" />
     <ClInclude Include="Scapula.h" />
+    <ClInclude Include="DespenserWithSweetStuffing.h" />
     <ClInclude Include="System.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
