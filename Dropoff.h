@@ -1,7 +1,8 @@
 #pragma once
-class Dropoff
+#include "IDrop.h"
+class Dropoff : public IDrop
 {
 public:
-	void Give();
+	virtual void Give();
 };
 

@@ -10,8 +10,9 @@ protected:
 	IKitchenAppliance * despenser;
 public:
 	virtual void actionEnable() = 0; 
-	virtual void actionDisable() = 0; 
+	virtual void actionDisable() = 0;
 	DespenserContent(IKitchenAppliance* despenser);
 	~DespenserContent() {};
+	
 };
 

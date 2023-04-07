@@ -31,6 +31,11 @@ void System::SetRecipe(vector<string> * recipe)
 	this->recipe = recipe;
 }
 
+void System::SetSubmitter(Adapter* submitter)
+{
+	this->submitter = submitter;
+}
+
 void System::ShowRecipeList()
 {
 	bot->ReadList(recipe);
@@ -61,5 +66,10 @@ void System::Disable() {
 void System::Give()
 {
 	dropoff->Give();
+}
+
+void System::ServeCutlery()
+{
+	submitter->Give();
 }
 
