@@ -89,7 +89,7 @@ public:
 	};    // Удаление узла списка
 
 	superIterator begin() { return superIterator(head); };
-	superIterator end() { return superIterator(getLast()); };
+	superIterator end() { return superIterator(getLast()->ptr); };
 	
 };
 

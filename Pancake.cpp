@@ -53,6 +53,7 @@ int main()
     LeafDevice* leafScapula = new LeafDevice(scapula->name, "small");
     LeafDevice* leafScales = new LeafDevice(scales->name, "small");
     LeafDevice* leafDespenser = new LeafDevice(despenser.name, "middle");
+
     devices.Add(leafPlate);
     devices.Add(leafFan);
     devices.Add(leafPacker);
