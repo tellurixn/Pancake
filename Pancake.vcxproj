@@ -128,18 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Adapter.cpp" />
-    <ClCompile Include="Aggregate.cpp" />
     <ClCompile Include="CompositeDevice.cpp" />
     <ClCompile Include="Despenser.cpp" />
     <ClCompile Include="DespenserContent.cpp" />
     <ClCompile Include="DespenserWithDough.cpp" />
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="Dropoff.cpp" />
-    <ClCompile Include="Element.cpp" />
     <ClCompile Include="Fan.cpp" />
     <ClCompile Include="HelperBot.cpp" />
-    <ClCompile Include="Iterator.cpp" />
     <ClCompile Include="LeafDevice.cpp" />
+    <ClCompile Include="ListNode.cpp" />
+    <ClCompile Include="MyIterator.cpp" />
+    <ClCompile Include="MyList.cpp" />
     <ClCompile Include="Packer.cpp" />
     <ClCompile Include="Pancake.cpp" />
     <ClCompile Include="Payment.cpp" />
@@ -152,7 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Adapter.h" />
-    <ClInclude Include="Aggregate.h" />
     <ClInclude Include="Bot.h" />
     <ClInclude Include="CompositeDevice.h" />
     <ClInclude Include="Despenser.h" />
@@ -160,13 +159,14 @@
     <ClInclude Include="DespenserWithDough.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="Dropoff.h" />
-    <ClInclude Include="Element.h" />
     <ClInclude Include="Fan.h" />
     <ClInclude Include="HelperBot.h" />
     <ClInclude Include="IDrop.h" />
     <ClInclude Include="IKitchenAppliance.h" />
-    <ClInclude Include="Iterator.h" />
     <ClInclude Include="LeafDevice.h" />
+    <ClInclude Include="ListNode.h" />
+    <ClInclude Include="MyIterator.h" />
+    <ClInclude Include="MyList.h" />
     <ClInclude Include="Packer.h" />
     <ClInclude Include="Payment.h" />
     <ClInclude Include="Plate.h" />

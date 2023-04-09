@@ -72,13 +72,13 @@
     <ClCompile Include="CompositeDevice.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Iterator.cpp">
+    <ClCompile Include="MyIterator.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Element.cpp">
+    <ClCompile Include="ListNode.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Aggregate.cpp">
+    <ClCompile Include="MyList.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -149,13 +149,13 @@
     <ClInclude Include="CompositeDevice.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Iterator.h">
+    <ClInclude Include="MyIterator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Element.h">
+    <ClInclude Include="ListNode.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Aggregate.h">
+    <ClInclude Include="MyList.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
