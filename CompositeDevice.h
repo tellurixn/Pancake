@@ -24,7 +24,10 @@ public:
 	virtual void Display();
 	virtual void Composition();
 	virtual string SizeOfDevice();
-	void SortBySize();
 	virtual void PrintName();
+	void SortBySize();
+	void ShowBigDevices();
+	void ShowMiddleDevices();
+	void ShowSmallDevices();
 };
 

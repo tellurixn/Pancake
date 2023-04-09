@@ -27,24 +27,40 @@ string CompositeDevice::SizeOfDevice()
 
 void CompositeDevice::SortBySize()
 {
-	MyList<Device*>::superIterator iter = children.begin();
+	ShowBigDevices();
+	ShowMiddleDevices();
+	ShowSmallDevices();
+	cout << endl;
+}
 
-	cout << "Большие по размеру устройства:" << endl;
-	for (; iter != children.end(); iter++) {
-		if((*iter)->field->SizeOfDevice() == "big")
+void CompositeDevice::ShowBigDevices()
+{
+	cout << "Большие устройства:" << endl;
+	for (MyList<Device*>::superIterator iter = children.begin(); iter != children.end(); iter++) {
+		if ((*iter)->field->SizeOfDevice() == "big")
 			(*iter)->field->PrintName();
 	}
-	cout << "Средние по размеру устройства:" << endl;
-	for (iter = children.begin(); iter != children.end(); iter++) {
+	cout << endl;
+}
+
+void CompositeDevice::ShowMiddleDevices()
+{
+	cout << "Средние устройства:" << endl;
+	for (MyList<Device*>::superIterator iter = children.begin(); iter != children.end(); iter++) {
 		if ((*iter)->field->SizeOfDevice() == "middle")
 			(*iter)->field->PrintName();
 	}
-	cout << "Маленькие по размеру устройства:" << endl;
-	for (iter = children.begin(); iter != children.end(); iter++) {
+	cout << endl;
+}
+
+void CompositeDevice::ShowSmallDevices()
+{
+	cout << "Маленькие устройства:" << endl;
+	for (MyList<Device*>::superIterator iter = children.begin(); iter != children.end(); iter++) {
 		if ((*iter)->field->SizeOfDevice() == "small")
 			(*iter)->field->PrintName();
 	}
-	printf("\n");
+	cout << endl;
 }
 
 void CompositeDevice::PrintName()
@@ -53,6 +69,7 @@ void CompositeDevice::PrintName()
 		(*iter)->field->PrintName();
 	}
 	printf("\n");
+	cout << endl;
 }
 
 
