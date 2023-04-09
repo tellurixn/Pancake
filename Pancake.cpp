@@ -63,6 +63,7 @@ int main()
     cout << "Содержимое компоновщика: " << endl;
     devices.Display();
     cout << "Компоновщик отработал\n" << endl;
+    devices.SortBySize();
 
 
     

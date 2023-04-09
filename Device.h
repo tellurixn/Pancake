@@ -15,8 +15,9 @@ public:
 	}
 	virtual void Display() = 0;
 	virtual void Composition() = 0;
-	virtual void SizeOfDevice() = 0;
-	//virtual CompositeDevice* GetComposite() { return 0; }
+	virtual string SizeOfDevice() = 0;
+	virtual void PrintName() = 0;
+	
 
 };
 

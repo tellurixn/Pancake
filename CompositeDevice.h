@@ -20,8 +20,11 @@ public:
 		//children.remove(leaf);
 		children.Delete(leaf);
 	}
+
 	virtual void Display();
 	virtual void Composition();
-	virtual void SizeOfDevice();
+	virtual string SizeOfDevice();
+	void SortBySize();
+	virtual void PrintName();
 };
 

@@ -1,12 +1,6 @@
 #include "CompositeDevice.h"
 #include <iostream>
 
-//void CompositeDevice::Display()
-//{
-//	for (list<Device*>::iterator iter = children.begin(); iter != children.end(); iter++)
-//		(*iter)->Display();
-//	printf("\n");
-//}
 void CompositeDevice::Display()
 {
 	for (MyList<Device*>::superIterator iter = children.begin(); iter != children.end(); iter++) {
@@ -14,30 +8,51 @@ void CompositeDevice::Display()
 	}
 	printf("\n");
 }
-//void CompositeDevice::Composition()
-//{
-//	for (list<Device*>::iterator iter = children.begin(); iter != children.end(); iter++)
-//		(*iter)->Composition();
-//	printf("\n");
-//}
+
 void CompositeDevice::Composition()
 {
 	for (MyList<Device*>::superIterator iter = children.begin(); iter != children.end(); iter++)
-		
+		(*iter)->field->Composition();
 	printf("\n");
 }
-//void CompositeDevice::SizeOfDevice()
-//{
-//	for (list<Device*>::iterator iter = children.begin(); iter != children.end(); iter++)
-//		(*iter)->Composition();
-//	printf("\n");
-//
-//}
 
-void CompositeDevice::SizeOfDevice()
+
+string CompositeDevice::SizeOfDevice()
 {
+	string result = "";
 	for (MyList<Device*>::superIterator iter = children.begin(); iter != children.end(); iter++)
-		//(*iter)->Composition();
-	printf("\n");
-
+		result += (*iter)->field->SizeOfDevice() + "\n";
+	return result;
 }
+
+void CompositeDevice::SortBySize()
+{
+	MyList<Device*>::superIterator iter = children.begin();
+
+	cout << "Большие по размеру устройства:" << endl;
+	for (; iter != children.end(); iter++) {
+		if((*iter)->field->SizeOfDevice() == "big")
+			(*iter)->field->PrintName();
+	}
+	cout << "Средние по размеру устройства:" << endl;
+	for (iter = children.begin(); iter != children.end(); iter++) {
+		if ((*iter)->field->SizeOfDevice() == "middle")
+			(*iter)->field->PrintName();
+	}
+	cout << "Маленькие по размеру устройства:" << endl;
+	for (iter = children.begin(); iter != children.end(); iter++) {
+		if ((*iter)->field->SizeOfDevice() == "small")
+			(*iter)->field->PrintName();
+	}
+	printf("\n");
+}
+
+void CompositeDevice::PrintName()
+{
+	for (MyList<Device*>::superIterator iter = children.begin(); iter != children.end(); iter++) {
+		(*iter)->field->PrintName();
+	}
+	printf("\n");
+}
+
+

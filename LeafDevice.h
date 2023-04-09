@@ -1,5 +1,6 @@
 #pragma once
 #include "Device.h"
+#include <iostream>
 
 class LeafDevice : public Device
 {
@@ -12,8 +13,11 @@ public:
 	virtual void Composition() {
 		printf("CLEAR %s", DeviceName.data());
 	}
-	virtual void SizeOfDevice() {
-		printf("PURE %s", Size.data());
+	virtual string SizeOfDevice() {
+		return Size;
+	};
+	virtual void PrintName() {
+		cout << this->DeviceName << endl;
 	};
 };
 
