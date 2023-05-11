@@ -128,7 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Adapter.cpp" />
+    <ClCompile Include="CappuccinoWithCakeMaker.cpp" />
+    <ClCompile Include="IBreakfastMaker.cpp" />
     <ClCompile Include="BWPrinter.cpp" />
+    <ClCompile Include="Cake.cpp" />
+    <ClCompile Include="Cappuccino.cpp" />
     <ClCompile Include="Check.cpp" />
     <ClCompile Include="ColorPrinter.cpp" />
     <ClCompile Include="CompositeDevice.cpp" />
@@ -136,10 +140,16 @@
     <ClCompile Include="DespenserContent.cpp" />
     <ClCompile Include="DespenserWithDough.cpp" />
     <ClCompile Include="Device.cpp" />
+    <ClCompile Include="Donut.cpp" />
     <ClCompile Include="Dropoff.cpp" />
     <ClCompile Include="Fan.cpp" />
     <ClCompile Include="Flyer.cpp" />
     <ClCompile Include="HelperBot.cpp" />
+    <ClCompile Include="Breakfast.cpp" />
+    <ClCompile Include="IBakery.cpp" />
+    <ClCompile Include="ICoffee.cpp" />
+    <ClCompile Include="Latte.cpp" />
+    <ClCompile Include="LatteWithDonutMaker.cpp" />
     <ClCompile Include="LeafDevice.cpp" />
     <ClCompile Include="MyIterator.cpp" />
     <ClCompile Include="MyList.cpp" />
@@ -158,7 +168,11 @@
   <ItemGroup>
     <ClInclude Include="Adapter.h" />
     <ClInclude Include="Bot.h" />
+    <ClInclude Include="CappuccinoWithCakeMaker.h" />
+    <ClInclude Include="IBreakfastMaker.h" />
     <ClInclude Include="BWPrinter.h" />
+    <ClInclude Include="Cake.h" />
+    <ClInclude Include="Cappuccino.h" />
     <ClInclude Include="Check.h" />
     <ClInclude Include="ColorPrinter.h" />
     <ClInclude Include="CompositeDevice.h" />
@@ -166,12 +180,18 @@
     <ClInclude Include="DespenserContent.h" />
     <ClInclude Include="DespenserWithDough.h" />
     <ClInclude Include="Device.h" />
+    <ClInclude Include="Donut.h" />
     <ClInclude Include="Dropoff.h" />
     <ClInclude Include="Fan.h" />
     <ClInclude Include="Flyer.h" />
     <ClInclude Include="HelperBot.h" />
+    <ClInclude Include="Breakfast.h" />
+    <ClInclude Include="IBakery.h" />
+    <ClInclude Include="ICoffee.h" />
     <ClInclude Include="IDrop.h" />
     <ClInclude Include="IKitchenAppliance.h" />
+    <ClInclude Include="Latte.h" />
+    <ClInclude Include="LatteWithDonutMaker.h" />
     <ClInclude Include="LeafDevice.h" />
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="MyIterator.h" />

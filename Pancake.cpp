@@ -21,6 +21,9 @@
 #include "Flyer.h"
 #include "ColorPrinter.h"
 #include "BWPrinter.h"
+#include "LatteWithDonutMaker.h"
+#include "CappuccinoWithCakeMaker.h"
+#include "Breakfast.h"
 
 int main()
 {
@@ -151,5 +154,18 @@ int main()
     Printout* check = bwprinter->StartPrinting("Чек");
     flyer->Display();
     check->Display();
+
+    //Абстрактная фабрика
+    CappuccinoWithCakeMaker *cappWithCake = new CappuccinoWithCakeMaker();
+    LatteWithDonutMaker* latteWithDonut = new LatteWithDonutMaker();
+
+    Breakfast* firstBreakfast = cappWithCake->MakeBreakfast();
+    Breakfast* secondBreakfast = latteWithDonut->MakeBreakfast();
+
+    cout << "\nБлиномат теперь готовит завтраки!" << endl;
+    cout << "Первый завтрак" << endl;
+    firstBreakfast->show();
+    cout << "\nВторой завтрак" << endl;
+    secondBreakfast->show();
     
 }
