@@ -128,6 +128,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Adapter.cpp" />
+    <ClCompile Include="BWPrinter.cpp" />
+    <ClCompile Include="Check.cpp" />
+    <ClCompile Include="ColorPrinter.cpp" />
     <ClCompile Include="CompositeDevice.cpp" />
     <ClCompile Include="Despenser.cpp" />
     <ClCompile Include="DespenserContent.cpp" />
@@ -135,15 +138,17 @@
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="Dropoff.cpp" />
     <ClCompile Include="Fan.cpp" />
+    <ClCompile Include="Flyer.cpp" />
     <ClCompile Include="HelperBot.cpp" />
     <ClCompile Include="LeafDevice.cpp" />
-    <ClCompile Include="ListNode.cpp" />
     <ClCompile Include="MyIterator.cpp" />
     <ClCompile Include="MyList.cpp" />
     <ClCompile Include="Packer.cpp" />
     <ClCompile Include="Pancake.cpp" />
     <ClCompile Include="Payment.cpp" />
     <ClCompile Include="Plate.cpp" />
+    <ClCompile Include="Printer.cpp" />
+    <ClCompile Include="Printout.cpp" />
     <ClCompile Include="Scales.cpp" />
     <ClCompile Include="Scapula.cpp" />
     <ClCompile Include="DespenserWithSweetStuffing.cpp" />
@@ -153,6 +158,9 @@
   <ItemGroup>
     <ClInclude Include="Adapter.h" />
     <ClInclude Include="Bot.h" />
+    <ClInclude Include="BWPrinter.h" />
+    <ClInclude Include="Check.h" />
+    <ClInclude Include="ColorPrinter.h" />
     <ClInclude Include="CompositeDevice.h" />
     <ClInclude Include="Despenser.h" />
     <ClInclude Include="DespenserContent.h" />
@@ -160,6 +168,7 @@
     <ClInclude Include="Device.h" />
     <ClInclude Include="Dropoff.h" />
     <ClInclude Include="Fan.h" />
+    <ClInclude Include="Flyer.h" />
     <ClInclude Include="HelperBot.h" />
     <ClInclude Include="IDrop.h" />
     <ClInclude Include="IKitchenAppliance.h" />
@@ -170,6 +179,8 @@
     <ClInclude Include="Packer.h" />
     <ClInclude Include="Payment.h" />
     <ClInclude Include="Plate.h" />
+    <ClInclude Include="Printer.h" />
+    <ClInclude Include="Printout.h" />
     <ClInclude Include="ProxyBot.h" />
     <ClInclude Include="Scales.h" />
     <ClInclude Include="Scapula.h" />

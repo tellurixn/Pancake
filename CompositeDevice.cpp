@@ -1,6 +1,16 @@
 #include "CompositeDevice.h"
 #include <iostream>
 
+void CompositeDevice::Add(Device* leaf)
+{
+	children.Add(leaf);
+}
+
+void CompositeDevice::Remove(Device* leaf)
+{
+	children.Delete(leaf);
+}
+
 void CompositeDevice::Display()
 {
 	for (MyList<Device*>::superIterator iter = children.begin(); iter != children.end(); iter++) {

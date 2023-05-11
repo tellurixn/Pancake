@@ -1,6 +1,7 @@
 #pragma once
+
 template <class T>
-class ListNode
+class ListNode //Элемент списка
 {
 public:
 	T field;//сам элемент
@@ -10,13 +11,19 @@ public:
 		field = t;
 		ptr = 0;
 	};
+
 	~ListNode() {
 		if (ptr)
 			delete ptr;
 	};
 
-	ListNode* NextField() { return ptr; };
-	T* GetCurrent() { return &field; };
+	ListNode* NextField() { 
+		return ptr;
+	};
+
+	T* GetCurrent() { 
+		return &field;
+	};
 
 	void AddItem(T const& t) {
 		if (ptr)

@@ -7,6 +7,7 @@
 #include "IKitchenAppliance.h"
 #include "Adapter.h"
 
+
 class System
 {
 private:
@@ -16,6 +17,7 @@ private:
 	Dropoff * dropoff;
 	IKitchenAppliance * device;
 	Adapter* submitter;
+	
 
 public:
 	System();

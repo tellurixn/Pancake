@@ -15,6 +15,12 @@
 #include "Adapter.h"
 #include "CompositeDevice.h"
 #include "LeafDevice.h"
+#include "Printout.h"
+#include "Printer.h"
+#include "Check.h"
+#include "Flyer.h"
+#include "ColorPrinter.h"
+#include "BWPrinter.h"
 
 int main()
 {
@@ -46,7 +52,10 @@ int main()
     Scales* scales = new Scales;
     Despenser despenser;
 
+
+    //Создание компоновщика
     CompositeDevice devices;
+    //Создание листьев
     LeafDevice* leafPlate = new LeafDevice(plate->name, "big");
     LeafDevice* leafFan = new LeafDevice(fan->name, "middle");
     LeafDevice* leafPacker = new LeafDevice(packer->name, "small");
@@ -54,17 +63,19 @@ int main()
     LeafDevice* leafScales = new LeafDevice(scales->name, "small");
     LeafDevice* leafDespenser = new LeafDevice(despenser.name, "middle");
 
+    //Наполнение компоновщика объектами
     devices.Add(leafPlate);
     devices.Add(leafFan);
     devices.Add(leafPacker);
     devices.Add(leafScapula);
     devices.Add(leafScales);
     devices.Add(leafDespenser);
+
     cout << "Содержимое компоновщика: " << endl;
     devices.Display();
-    cout << "Компоновщик отработал\n" << endl;
+    cout << "Сортировка содержимого по размеру(от большого к малому)\n" << endl;
     devices.SortBySize();
-
+    cout << "Компоновщик отработал\n" << endl;
 
     
     //Добавление декораторов для дозатора
@@ -130,5 +141,15 @@ int main()
     PancakeSystem.Disable();
     PancakeSystem.Give();
     PancakeSystem.ServeCutlery();
+
+    //Печать флаера и чека
+    
+    Printer* colorPrinter = new ColorPrinter();
+    Printout* flyer = colorPrinter->StartPrinting("Флаер");
+    
+    Printer* bwprinter = new BWPrinter();
+    Printout* check = bwprinter->StartPrinting("Чек");
+    flyer->Display();
+    check->Display();
     
 }

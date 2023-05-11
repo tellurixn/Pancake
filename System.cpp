@@ -36,6 +36,7 @@ void System::SetSubmitter(Adapter* submitter)
 	this->submitter = submitter;
 }
 
+
 void System::ShowRecipeList()
 {
 	bot->ReadList(recipe);
