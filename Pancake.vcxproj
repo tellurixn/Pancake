@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="Adapter.cpp" />
     <ClCompile Include="CappuccinoWithCakeMaker.cpp" />
+    <ClCompile Include="CarbonatedDrinks.cpp" />
+    <ClCompile Include="Cola.cpp" />
+    <ClCompile Include="Drinks.cpp" />
     <ClCompile Include="IBreakfastMaker.cpp" />
     <ClCompile Include="BWPrinter.cpp" />
     <ClCompile Include="Cake.cpp" />
@@ -148,11 +151,14 @@
     <ClCompile Include="Breakfast.cpp" />
     <ClCompile Include="IBakery.cpp" />
     <ClCompile Include="ICoffee.cpp" />
+    <ClCompile Include="Juice.cpp" />
     <ClCompile Include="Latte.cpp" />
     <ClCompile Include="LatteWithDonutMaker.cpp" />
     <ClCompile Include="LeafDevice.cpp" />
+    <ClCompile Include="MineralWater.cpp" />
     <ClCompile Include="MyIterator.cpp" />
     <ClCompile Include="MyList.cpp" />
+    <ClCompile Include="NonCarbonatedDrinks.cpp" />
     <ClCompile Include="Packer.cpp" />
     <ClCompile Include="Pancake.cpp" />
     <ClCompile Include="Payment.cpp" />
@@ -164,11 +170,15 @@
     <ClCompile Include="DespenserWithSweetStuffing.cpp" />
     <ClCompile Include="Submitter.cpp" />
     <ClCompile Include="System.cpp" />
+    <ClCompile Include="Tea.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Adapter.h" />
     <ClInclude Include="Bot.h" />
     <ClInclude Include="CappuccinoWithCakeMaker.h" />
+    <ClInclude Include="CarbonatedDrinks.h" />
+    <ClInclude Include="Cola.h" />
+    <ClInclude Include="Drinks.h" />
     <ClInclude Include="IBreakfastMaker.h" />
     <ClInclude Include="BWPrinter.h" />
     <ClInclude Include="Cake.h" />
@@ -190,12 +200,15 @@
     <ClInclude Include="ICoffee.h" />
     <ClInclude Include="IDrop.h" />
     <ClInclude Include="IKitchenAppliance.h" />
+    <ClInclude Include="Juice.h" />
     <ClInclude Include="Latte.h" />
     <ClInclude Include="LatteWithDonutMaker.h" />
     <ClInclude Include="LeafDevice.h" />
     <ClInclude Include="ListNode.h" />
+    <ClInclude Include="MineralWater.h" />
     <ClInclude Include="MyIterator.h" />
     <ClInclude Include="MyList.h" />
+    <ClInclude Include="NonCarbonatedDrinks.h" />
     <ClInclude Include="Packer.h" />
     <ClInclude Include="Payment.h" />
     <ClInclude Include="Plate.h" />
@@ -207,6 +220,7 @@
     <ClInclude Include="DespenserWithSweetStuffing.h" />
     <ClInclude Include="Submitter.h" />
     <ClInclude Include="System.h" />
+    <ClInclude Include="Tea.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

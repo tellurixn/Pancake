@@ -24,6 +24,10 @@
 #include "LatteWithDonutMaker.h"
 #include "CappuccinoWithCakeMaker.h"
 #include "Breakfast.h"
+#include "Tea.h"
+#include "Cola.h"
+#include "Juice.h"
+#include "MineralWater.h"
 
 int main()
 {
@@ -168,4 +172,25 @@ int main()
     cout << "\nВторой завтрак" << endl;
     secondBreakfast->show();
     
+
+    //Прототип
+    cout << "\n\nНапитки" << endl;
+    Tea* teaPrototype = new Tea(15, "Чай с лимомном");
+    Drinks *greenTea = teaPrototype->Clone();
+
+    teaPrototype->ShowName();
+    teaPrototype->ShowCost();
+
+    greenTea->ShowName();
+    greenTea->ShowCost();
+
+    Drinks *newCola = new Cola(35, "Кола с ванилью");
+    Drinks* CocaCola = newCola->Clone();
+
+    newCola->ShowName();
+    newCola->ShowCost();
+
+    CocaCola->ShowName();
+    CocaCola->ShowCost();
+
 }
