@@ -28,6 +28,7 @@
 #include "Cola.h"
 #include "Juice.h"
 #include "MineralWater.h"
+#include "SingleUser.h"
 
 int main()
 {
@@ -59,7 +60,7 @@ int main()
     Scales* scales = new Scales;
     Despenser despenser;
 
-
+    /*
     //Создание компоновщика
     CompositeDevice devices;
     //Создание листьев
@@ -83,7 +84,7 @@ int main()
     cout << "Сортировка содержимого по размеру(от большого к малому)\n" << endl;
     devices.SortBySize();
     cout << "Компоновщик отработал\n" << endl;
-
+    */
     
     //Добавление декораторов для дозатора
     DespenserWithDough despWithDough(&despenser); //Дозатор с тестом
@@ -193,4 +194,13 @@ int main()
     CocaCola->ShowName();
     CocaCola->ShowCost();
 
+    //Одиночка
+    cout << "\nСистема регистрирует пользователей" << endl;
+    cout << "Добавление пользователя" << endl;
+    SingleUser* firstUser = SingleUser::Instance("Иван");
+    firstUser->Display();
+
+    cout << "Добавление нового пользователя" << endl;
+    SingleUser* secondUser = SingleUser::Instance("Дмитрий");
+    secondUser->Display();
 }
