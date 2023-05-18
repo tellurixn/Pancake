@@ -1,4 +1,4 @@
-п»ї#include <iostream>
+#include <iostream>
 #include <locale>
 #include "System.h"
 #include "Plate.h"
@@ -29,30 +29,31 @@
 #include "Juice.h"
 #include "MineralWater.h"
 #include "SingleUser.h"
+#include "Caretaker.h"
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
 
-    //РЎРѕР·РґР°РЅРёРµ РѕСЃРЅРѕРІРЅС‹С… РєРѕРјРїРѕРЅРµРЅС‚РѕРІ СЃРёСЃС‚РµРјС‹
+    //Создание основных компонентов системы
     Bot * helperBot = new ProxyBot("Helper");
 
     Payment * paymentDevice = new Payment();
     Dropoff * dropoffDevice = new Dropoff();
     vector<string> * recipeList = new vector<string>;
     
-    recipeList->push_back("Р‘Р»РёРЅ СЃРѕ СЃРіСѓС‰РµРЅРєРѕР№");
+    recipeList->push_back("Блин со сгущенкой");
     paymentDevice->SetPrice(20);
-    recipeList->push_back("Р‘Р»РёРЅ СЃРѕ СЃРјРµС‚Р°РЅРѕР№");
+    recipeList->push_back("Блин со сметаной");
     paymentDevice->SetPrice(25);
-    recipeList->push_back("Р‘Р»РёРЅ СЃ РІРёС€РЅРµРІРѕР№ РЅР°С‡РёРЅРєРѕР№");
+    recipeList->push_back("Блин с вишневой начинкой");
     paymentDevice->SetPrice(30);
-    recipeList->push_back("Р‘Р»РёРЅ СЃ РјР°Р»РёРЅРѕРІРѕР№ РЅР°С‡РёРЅРєРѕР№");
+    recipeList->push_back("Блин с малиновой начинкой");
     paymentDevice->SetPrice(35);
 
     
 
-    //РЎРѕР·РґР°РЅРёРµ РєСѓС…РѕРЅРЅС‹С… РїСЂРёР±РѕСЂРѕРІ РґР»СЏ СЃРёСЃС‚РµРјС‹
+    //Создание кухонных приборов для системы
     Plate  * plate = new Plate;
     Fan * fan = new Fan;
     Packer* packer = new Packer;
@@ -61,9 +62,9 @@ int main()
     Despenser despenser;
 
     /*
-    //РЎРѕР·РґР°РЅРёРµ РєРѕРјРїРѕРЅРѕРІС‰РёРєР°
+    //Создание компоновщика
     CompositeDevice devices;
-    //РЎРѕР·РґР°РЅРёРµ Р»РёСЃС‚СЊРµРІ
+    //Создание листьев
     LeafDevice* leafPlate = new LeafDevice(plate->name, "big");
     LeafDevice* leafFan = new LeafDevice(fan->name, "middle");
     LeafDevice* leafPacker = new LeafDevice(packer->name, "small");
@@ -71,7 +72,7 @@ int main()
     LeafDevice* leafScales = new LeafDevice(scales->name, "small");
     LeafDevice* leafDespenser = new LeafDevice(despenser.name, "middle");
 
-    //РќР°РїРѕР»РЅРµРЅРёРµ РєРѕРјРїРѕРЅРѕРІС‰РёРєР° РѕР±СЉРµРєС‚Р°РјРё
+    //Наполнение компоновщика объектами
     devices.Add(leafPlate);
     devices.Add(leafFan);
     devices.Add(leafPacker);
@@ -79,22 +80,22 @@ int main()
     devices.Add(leafScales);
     devices.Add(leafDespenser);
 
-    cout << "РЎРѕРґРµСЂР¶РёРјРѕРµ РєРѕРјРїРѕРЅРѕРІС‰РёРєР°: " << endl;
+    cout << "Содержимое компоновщика: " << endl;
     devices.Display();
-    cout << "РЎРѕСЂС‚РёСЂРѕРІРєР° СЃРѕРґРµСЂР¶РёРјРѕРіРѕ РїРѕ СЂР°Р·РјРµСЂСѓ(РѕС‚ Р±РѕР»СЊС€РѕРіРѕ Рє РјР°Р»РѕРјСѓ)\n" << endl;
+    cout << "Сортировка содержимого по размеру(от большого к малому)\n" << endl;
     devices.SortBySize();
-    cout << "РљРѕРјРїРѕРЅРѕРІС‰РёРє РѕС‚СЂР°Р±РѕС‚Р°Р»\n" << endl;
+    cout << "Компоновщик отработал\n" << endl;
     */
     
-    //Р”РѕР±Р°РІР»РµРЅРёРµ РґРµРєРѕСЂР°С‚РѕСЂРѕРІ РґР»СЏ РґРѕР·Р°С‚РѕСЂР°
-    DespenserWithDough despWithDough(&despenser); //Р”РѕР·Р°С‚РѕСЂ СЃ С‚РµСЃС‚РѕРј
-    DespenserWithSweetStuffing despWithSweetStuffing(&despenser);//Р”РѕР·Р°С‚РѕСЂ СЃРѕ СЃР»Р°РґРєРѕР№ РЅР°С‡РёРЅРєРѕР№
+    //Добавление декораторов для дозатора
+    DespenserWithDough despWithDough(&despenser); //Дозатор с тестом
+    DespenserWithSweetStuffing despWithSweetStuffing(&despenser);//Дозатор со сладкой начинкой
 
-    //Р”РѕР±Р°РІР»РµРЅРёРµ СЃРёСЃС‚РµРјС‹ РІС‹РґР°С‡Рё СЃС‚РѕР»РѕРІС‹С… РїСЂРёР±РѕСЂРѕРІ
+    //Добавление системы выдачи столовых приборов
     Submitter* submitter = new Submitter;
     Adapter* adapter = new Adapter(submitter);
 
-    //РЈСЃС‚Р°РЅРѕРІРєР° СЃРѕР·РґР°РЅРЅС‹С… РєРѕРјРїРѕРЅРµС‚РѕРІ РІ СЃРёСЃС‚РµРјСѓ
+    //Установка созданных компонетов в систему
     System PancakeSystem;
     PancakeSystem.SetBot(helperBot);
     PancakeSystem.SetPayment(paymentDevice);
@@ -104,28 +105,28 @@ int main()
 
 
 
-    //Р Р°Р±РѕС‚Р° СЃРёСЃС‚РµРјС‹ СЃ РІС‹Р±РѕСЂРѕРј Р°РєС‚РёРІРЅРѕРіРѕ РєСѓС…РѕРЅРЅРѕРіРѕ РїСЂРёР±РѕСЂР°
-    int userValue;//РќРѕРјРµСЂ Р±Р»РёРЅР° РІ СЃРїРёСЃРєРµ, РєРѕС‚РѕСЂС‹Р№ РІС‹Р±РµСЂРµС‚ РєР»РёРµРЅС‚
-    int userMoney;//РЎСѓРјРјР° Рє РѕРїР»Р°С‚Рµ РєР»РёРµРЅС‚Р°
+    //Работа системы с выбором активного кухонного прибора
+    int userValue;//Номер блина в списке, который выберет клиент
+    int userMoney;//Сумма к оплате клиента
 
-    //РћР±С‰РµРЅРёРµ СЃ РєР»РёРµРЅС‚РѕРј
-    cout << "РЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… Р±Р»РёРЅРѕРІ" << endl;
+    //Общение с клиентом
+    cout << "Список доступных блинов" << endl;
     PancakeSystem.ShowRecipeList();
-    cout << "Р¦РµРЅС‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ" << endl;
+    cout << "Цены соответственно" << endl;
     PancakeSystem.ShowPriceList();
 
     do {
-        cout << "Р’Р°С€ РІС‹Р±РѕСЂ: ";
+        cout << "Ваш выбор: ";
         cin >> userValue;
     } while (userValue > recipeList->size() || userValue <= 0);
 
     do {
-        cout << "Р’РІРµРґРёС‚Рµ СЃСѓРјРјСѓ РґР»СЏ РѕРїР»Р°С‚С‹: ";
+        cout << "Введите сумму для оплаты: ";
         cin >> userMoney;
     }while(PancakeSystem.MakeAPayment(userMoney, userValue - 1) != 0);
 
-    //Р Р°Р±РѕС‚Р° Р°РІС‚РѕРјР°С‚Р°
-    cout << "\nРќР°С‡РёРЅР°СЋ РіРѕС‚РѕРІРёС‚СЊ " +  recipeList->at(userValue - 1) << endl;
+    //Работа автомата
+    cout << "\nНачинаю готовить " +  recipeList->at(userValue - 1) << endl;
     PancakeSystem.SetActiveDevice(&despWithDough);
     PancakeSystem.Enable();
     PancakeSystem.Disable();
@@ -150,33 +151,33 @@ int main()
     PancakeSystem.Give();
     PancakeSystem.ServeCutlery();
 
-    //РџРµС‡Р°С‚СЊ С„Р»Р°РµСЂР° Рё С‡РµРєР°
+    //Печать флаера и чека
     
     Printer* colorPrinter = new ColorPrinter();
-    Printout* flyer = colorPrinter->StartPrinting("Р¤Р»Р°РµСЂ");
+    Printout* flyer = colorPrinter->StartPrinting("Флаер");
     
     Printer* bwprinter = new BWPrinter();
-    Printout* check = bwprinter->StartPrinting("Р§РµРє");
+    Printout* check = bwprinter->StartPrinting("Чек");
     flyer->Display();
     check->Display();
 
-    //РђР±СЃС‚СЂР°РєС‚РЅР°СЏ С„Р°Р±СЂРёРєР°
+    //Абстрактная фабрика
     CappuccinoWithCakeMaker *cappWithCake = new CappuccinoWithCakeMaker();
     LatteWithDonutMaker* latteWithDonut = new LatteWithDonutMaker();
 
     Breakfast* firstBreakfast = cappWithCake->MakeBreakfast();
     Breakfast* secondBreakfast = latteWithDonut->MakeBreakfast();
 
-    cout << "\nР‘Р»РёРЅРѕРјР°С‚ С‚РµРїРµСЂСЊ РіРѕС‚РѕРІРёС‚ Р·Р°РІС‚СЂР°РєРё!" << endl;
-    cout << "РџРµСЂРІС‹Р№ Р·Р°РІС‚СЂР°Рє" << endl;
+    cout << "\nБлиномат теперь готовит завтраки!" << endl;
+    cout << "Первый завтрак" << endl;
     firstBreakfast->show();
-    cout << "\nР’С‚РѕСЂРѕР№ Р·Р°РІС‚СЂР°Рє" << endl;
+    cout << "\nВторой завтрак" << endl;
     secondBreakfast->show();
     
 
-    //РџСЂРѕС‚РѕС‚РёРї
-    cout << "\n\nРќР°РїРёС‚РєРё" << endl;
-    Tea* teaPrototype = new Tea(15, "Р§Р°Р№ СЃ Р»РёРјРѕРјРЅРѕРј");
+    //Прототип
+    cout << "\n\nНапитки" << endl;
+    Tea* teaPrototype = new Tea(15, "Чай с лимомном");
     Drinks *greenTea = teaPrototype->Clone();
 
     teaPrototype->ShowName();
@@ -185,7 +186,7 @@ int main()
     greenTea->ShowName();
     greenTea->ShowCost();
 
-    Drinks *newCola = new Cola(35, "РљРѕР»Р° СЃ РІР°РЅРёР»СЊСЋ");
+    Drinks *newCola = new Cola(35, "Кола с ванилью");
     Drinks* CocaCola = newCola->Clone();
 
     newCola->ShowName();
@@ -194,13 +195,32 @@ int main()
     CocaCola->ShowName();
     CocaCola->ShowCost();
 
-    //РћРґРёРЅРѕС‡РєР°
-    cout << "\nРЎРёСЃС‚РµРјР° СЂРµРіРёСЃС‚СЂРёСЂСѓРµС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№" << endl;
-    cout << "Р”РѕР±Р°РІР»РµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ" << endl;
-    SingleUser* firstUser = SingleUser::Instance("РРІР°РЅ");
+    //Одиночка
+    cout << "\nСистема регистрирует пользователей" << endl;
+    cout << "Добавление пользователя" << endl;
+    SingleUser* firstUser = SingleUser::Instance("Иван");
     firstUser->Display();
 
-    cout << "Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ" << endl;
-    SingleUser* secondUser = SingleUser::Instance("Р”РјРёС‚СЂРёР№");
+    cout << "Добавление нового пользователя" << endl;
+    SingleUser* secondUser = SingleUser::Instance("Дмитрий");
     secondUser->Display();
+
+    //Memento
+    cout << endl;
+    Order* order = new Order("Blac tea");
+    Caretaker* caretaker = new Caretaker(order);
+    order->ShowCurrentOrder();
+    caretaker->Backup();
+    order->MakeOrder();
+    order->ShowCurrentOrder();
+    caretaker->Backup();
+    order->MakeOrder();
+    order->ShowCurrentOrder();
+    caretaker->ShowHistory();
+    caretaker->Undo();
+    order->ShowCurrentOrder();
+    
+
+
+
 }

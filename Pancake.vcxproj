@@ -130,7 +130,9 @@
     <ClCompile Include="Adapter.cpp" />
     <ClCompile Include="CappuccinoWithCakeMaker.cpp" />
     <ClCompile Include="CarbonatedDrinks.cpp" />
+    <ClCompile Include="Caretaker.cpp" />
     <ClCompile Include="Cola.cpp" />
+    <ClCompile Include="ConcreteMemento.cpp" />
     <ClCompile Include="Drinks.cpp" />
     <ClCompile Include="IBreakfastMaker.cpp" />
     <ClCompile Include="BWPrinter.cpp" />
@@ -159,6 +161,7 @@
     <ClCompile Include="MyIterator.cpp" />
     <ClCompile Include="MyList.cpp" />
     <ClCompile Include="NonCarbonatedDrinks.cpp" />
+    <ClCompile Include="Order.cpp" />
     <ClCompile Include="Packer.cpp" />
     <ClCompile Include="Pancake.cpp" />
     <ClCompile Include="Payment.cpp" />
@@ -178,7 +181,9 @@
     <ClInclude Include="Bot.h" />
     <ClInclude Include="CappuccinoWithCakeMaker.h" />
     <ClInclude Include="CarbonatedDrinks.h" />
+    <ClInclude Include="Caretaker.h" />
     <ClInclude Include="Cola.h" />
+    <ClInclude Include="ConcreteMemento.h" />
     <ClInclude Include="Drinks.h" />
     <ClInclude Include="IBreakfastMaker.h" />
     <ClInclude Include="BWPrinter.h" />
@@ -201,6 +206,7 @@
     <ClInclude Include="ICoffee.h" />
     <ClInclude Include="IDrop.h" />
     <ClInclude Include="IKitchenAppliance.h" />
+    <ClInclude Include="IMemento.h" />
     <ClInclude Include="Juice.h" />
     <ClInclude Include="Latte.h" />
     <ClInclude Include="LatteWithDonutMaker.h" />
@@ -210,6 +216,7 @@
     <ClInclude Include="MyIterator.h" />
     <ClInclude Include="MyList.h" />
     <ClInclude Include="NonCarbonatedDrinks.h" />
+    <ClInclude Include="Order.h" />
     <ClInclude Include="Packer.h" />
     <ClInclude Include="Payment.h" />
     <ClInclude Include="Plate.h" />
