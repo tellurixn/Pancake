@@ -162,6 +162,9 @@
     <ClCompile Include="OrderMaker.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="SystemPower.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IKitchenAppliance.h">
@@ -324,6 +327,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="OrderMaker.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemPower.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

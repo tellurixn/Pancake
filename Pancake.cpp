@@ -31,6 +31,7 @@
 #include "SingleUser.h"
 #include "Caretaker.h"
 #include "OrderMaker.h"
+#include "SystemPower.h"
 
 
 
@@ -209,7 +210,7 @@ int main()
     secondUser->Display();
 
     //Memento
-    cout << endl;
+    cout << "\nMemento" << endl;
     Order* order = new Order("Black tea");
     Caretaker* caretaker = new Caretaker(order);
     order->ShowCurrentOrder();
@@ -225,6 +226,7 @@ int main()
     
 
     //State
+    cout << "\nState" << endl;
     OrderMaker* orderMaker = new OrderMaker(order);
     orderMaker->MakeOrder();
     orderMaker->DeleteMyOrder();
@@ -232,8 +234,12 @@ int main()
     orderMaker->MakeOrder();
     orderMaker->DeleteMyOrder();
 
-    //
-
+    //Observer
+    cout << "\nObserver" << endl;
+    SystemPower sysPower;
+    PowerObserver powerObs(&sysPower);
+    sysPower.SetValue(true);
+    sysPower.SetValue(false);
 
 
 

@@ -175,6 +175,7 @@
     <ClCompile Include="SingleUser.cpp" />
     <ClCompile Include="Submitter.cpp" />
     <ClCompile Include="System.cpp" />
+    <ClCompile Include="SystemPower.cpp" />
     <ClCompile Include="Tea.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -231,6 +232,7 @@
     <ClInclude Include="SingleUser.h" />
     <ClInclude Include="Submitter.h" />
     <ClInclude Include="System.h" />
+    <ClInclude Include="SystemPower.h" />
     <ClInclude Include="Tea.h" />
   </ItemGroup>
   <ItemGroup>
