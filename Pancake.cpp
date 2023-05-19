@@ -30,6 +30,9 @@
 #include "MineralWater.h"
 #include "SingleUser.h"
 #include "Caretaker.h"
+#include "OrderMaker.h"
+
+
 
 int main()
 {
@@ -207,7 +210,7 @@ int main()
 
     //Memento
     cout << endl;
-    Order* order = new Order("Blac tea");
+    Order* order = new Order("Black tea");
     Caretaker* caretaker = new Caretaker(order);
     order->ShowCurrentOrder();
     caretaker->Backup();
@@ -220,6 +223,17 @@ int main()
     caretaker->Undo();
     order->ShowCurrentOrder();
     
+
+    //State
+    OrderMaker* orderMaker = new OrderMaker(order);
+    orderMaker->MakeOrder();
+    orderMaker->DeleteMyOrder();
+
+    orderMaker->MakeOrder();
+    orderMaker->DeleteMyOrder();
+
+    //
+
 
 
 
